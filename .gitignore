@@ -1,3 +1,5 @@
 .venv
 __pycache__
 res/log.txt
+res/secrets.py
+server/database/database_dev.db

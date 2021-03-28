@@ -1,4 +1,5 @@
 #Libarys
+import time
 #Project
 from res.config import LOG_FILE, LOG_LEVEL, LOG_LVL_CONS, LOG_LVL_FILE
 
@@ -8,7 +9,9 @@ class logging():
         self.tag = tag.upper()
 
     def _get_date(self):
-        return "20210328_12:00:00"
+        named_tuple = time.localtime()
+        time_string = time.strftime("%Y%m%d_%H:%M:%S", named_tuple)
+        return time_string
 
     def log(self, msg, prio):
         ts = self._get_date()

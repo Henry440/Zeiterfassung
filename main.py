@@ -2,19 +2,26 @@
 import sys
 #Project
 from res.config import VERSION_KEY
+from res.logging import logging
+
+#Global Vars
+TAG = "MAIN"
+log = logging(TAG)
 
 def as_client():
-    if VERSION_KEY == "dev":
-        print(f"Starte als Client")
+    log.log(f"Starte als Client", 0)
 
 def as_server():
-    if VERSION_KEY == "dev":
-        print(f"Starte als Server")
+    log.log(f"Starte als Server", 0)
 
+def cli():
+    log.log(f"Starte CLI", 0)
+    while True:
+        cmd = input()        
 
 if __name__ == "__main__":
-    if VERSION_KEY == "dev":
-        print(f"Argumente gefunden : {len(sys.argv)}")
+    log.log("Programmstart", 1)    
+    log.log(f"Argumente gefunden : {len(sys.argv)}", 0)
     if len(sys.argv) > 1:
         if sys.argv[1] == "server":
             as_server()
@@ -23,3 +30,7 @@ if __name__ == "__main__":
     else:
         #Default Clientanwendung
         as_client()
+
+    cli()
+else:
+    log.log("Kann nicht Importiert werden", 4)

@@ -1,4 +1,4 @@
-CREATE TABLE "aktion" (
+CREATE TABLE "events" (
 	"id"	INTEGER,
 	"user_id"	INTEGER NOT NULL,
 	"aktion_id"	INTEGER NOT NULL,

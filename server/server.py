@@ -12,7 +12,7 @@ app = Flask(__name__)
 #Routen
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", version=VERSION, key=VERSION_KEY)
 
 #Starte WebServer, Aufruf von main
 def start(ip, port):

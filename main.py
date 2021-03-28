@@ -1,5 +1,6 @@
 #Libarys
 import sys
+import threading
 #Project
 from res.config import VERSION_KEY, SERVER_IP, SERVER_PORT
 from res.logging import logging
@@ -26,16 +27,17 @@ if __name__ == "__main__":
     log.log(f"Argumente gefunden : {len(sys.argv)}", 0)
 
     mode = "client"
+    if sys.argv[1] == "server":
+            mode = "server"
+
     if len(sys.argv) > 2: #ARG3 IP
         SERVER_IP = sys.argv[2]
     if len(sys.argv) > 3: #ARG4 IP
         SERVER_PORT = int(sys.argv[3])
 
     log.log(f"Netzwerk Konfig : {SERVER_IP}:{SERVER_PORT}", 0)
-    if len(sys.argv) > 1:
-        if sys.argv[1] == "server":
-            mode = "server"
-            as_server(SERVER_IP, SERVER_PORT)
+    if mode == "server":
+        as_server(SERVER_IP, SERVER_PORT)
     else:
         as_client(SERVER_IP, SERVER_PORT)
 

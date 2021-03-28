@@ -1,0 +1,5 @@
+CREATE TABLE "abteilung" (
+	"id"	INTEGER,
+	"name"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);

@@ -5,6 +5,7 @@ import threading
 from res.config import VERSION_KEY, SERVER_IP, SERVER_PORT
 from res.logging import logging
 from server import server
+from client import client
 
 #Global Vars
 TAG = "MAIN"
@@ -12,6 +13,7 @@ log = logging(TAG)
 
 def as_client(ip, port):
     log.log(f"Starte als Client", 0)
+    client.start(ip, port)
 
 def as_server(ip, port):
     log.log(f"Starte als Server", 0)

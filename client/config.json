@@ -1,0 +1,21 @@
+{
+    "client_secrte":"NONE",
+    "status_keys":{
+        "key1":{
+            "name":"Kommen",
+            "function_code":"1"
+        },
+        "key2":{
+            "name":"Gehen",
+            "function_code":"2"
+        },
+        "key3":{
+            "name":"Pause Beginn",
+            "function_code":"3"
+        },
+        "key4":{
+            "name":"Pause Ende",
+            "function_code":"4"
+        }
+    }
+}

@@ -20,3 +20,6 @@ DATABASE_TABLE_TEAM = "team"
 DATABASE_TABLE_ABTEILUNG = "abteilung"
 DATABASE_TABLE_EVENTS = "event"
 DATABASE_TABLE_ACTION = "aktion"
+
+#CLIEN
+CLIENT_CONFIG = "./client/config.json"

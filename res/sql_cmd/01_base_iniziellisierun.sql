@@ -1,6 +1,6 @@
 INSERT INTO abteilung (name) VALUES ('Default');
-INSERT INTO team (name, abteilund_id) VALUES ('Default', 1);
-INSERT INTO user (username, team_id, stunden) VALUES ('Default', 1, 40); 
+INSERT INTO team (name, abteilung_id) VALUES ('Default', 1);
+INSERT INTO user (name, team_id, stunden) VALUES ('Default', 1, 40); 
 
 INSERT INTO aktion (name, beschreibung) VALUES ('Kommen','Betreten des Firmengebäudes, Beginn der Arbeitszeit');
 INSERT INTO aktion (name, beschreibung) VALUES ('Gehen','Verlassen des Firmengebäudes, Ende der Arbeitszeit');

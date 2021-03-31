@@ -67,14 +67,11 @@ class Ui_Dialog(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.settings), _translate("Dialog", "Einstellungen"))
 
 
-def run(name1, name2, name3, name4):
-    app = QtWidgets.QApplication([])
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
     ui.setupUi(Dialog)
-    ui.btnStatus1.setText(name1)
-    ui.btnStatus2.setText(name2)
-    ui.btnStatus3.setText(name3)
-    ui.btnStatus4.setText(name4)
     Dialog.show()
     sys.exit(app.exec_())

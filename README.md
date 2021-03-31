@@ -1,9 +1,21 @@
 # Zeiterfassungssystem
 Ziel ist es eine Anwendung zu erstellen, die es ermöglicht eine Zeiterfassung durchzuführen und Verhalten zu Analysieren.
 
-## Konzept
-- Laufen soll das ganze als Client Server Anwendung 
-- Die Daten werden in einer MySQL Datenbank gespeichert
-- Userdaten sollen Anonymisiert gespreichter werden
-- Auswertung erfolgt nur Clientseitig
-- Neben Tracken von Arbeitszeit soll auch Prozesse Getrackt werden
+## Requirements
+- Python3.9
+- Git
+
+## Vorbereitung Linux
+``` Bash
+sudo apt update
+sudo apt upgrade -y
+
+sudo apt install python3 python3-pip
+sudo apt install screen git
+```
+
+## Installation
+``` Bash
+git clone http://henry440.de/henry440/Zeiterfassung.git
+pip install -r requirements.txt
+```
